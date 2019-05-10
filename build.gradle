@@ -1,12 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+    }
+}
+
+
 apply plugin: 'java'
-apply plugin: 'application'
-mainClassName = 'app.HelloWorld'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'app'
+    version =  '0.1.0'
+}
 
 repositories { mavenCentral() }
 
 sourceCompatibility = 1.8
 
 dependencies {
-    compile "joda-time:joda-time:2.2"
+    compile "org.springframework.boot:spring-boot-starter-web"
     testCompile "junit:junit:4.12"
 }
