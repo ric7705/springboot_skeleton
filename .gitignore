@@ -3,3 +3,4 @@
 build/
 springboot_skeleton.iml
 out/
+logs/
