@@ -1,15 +1,26 @@
-package app.vo;
+package app.vo.response;
 
-public class UserVo {
+public class UserRes {
+    private Long id;
+
     private String username;
     private String email;
 
-    public UserVo() {
+    public UserRes() {
     }
 
-    public UserVo(String username, String email) {
+    public UserRes(Long id, String username, String email) {
+        this.id = id;
         this.username = username;
         this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {

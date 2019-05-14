@@ -1,11 +1,16 @@
 package app.service;
 
 
-import app.vo.UserVo;
+import app.vo.response.UserRes;
+import app.vo.request.UserReq;
 
 import java.util.List;
 
 public interface UserService {
 
-    List<UserVo> getUsers();
+    List<UserRes> getUsers();
+
+    boolean addUser(UserReq user);
+    boolean deleteUser(String id);
+    boolean updateUser(UserReq userReq);
 }
