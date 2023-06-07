@@ -43,10 +43,16 @@ public class UserController {
         return userService.deleteUser(id);
     }
 
+
     @RequestMapping(method = RequestMethod.PUT)
-    public boolean updaeUser(@RequestBody @Valid UserReq user){
+    public boolean updateUser(@RequestBody @Valid UserReq user){
 
         return userService.updateUser(user);
+    }
+
+    @RequestMapping(value="lock", method = RequestMethod.GET)
+    public void lock(){
+        userService.testLock();
     }
 
 

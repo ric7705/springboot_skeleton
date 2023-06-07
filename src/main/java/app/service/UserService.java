@@ -13,4 +13,5 @@ public interface UserService {
     boolean addUser(UserReq user);
     boolean deleteUser(String id);
     boolean updateUser(UserReq userReq);
+    void testLock();
 }
